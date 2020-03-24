@@ -1,7 +1,5 @@
 Django实现可重用注册登录系统
 
-项目源码：git@github.com:linshutu/login_register.git
-
 ### 项目流程
 
 - 搭建项目环境
@@ -1703,14 +1701,14 @@ def send_email(email, code):
 
     from django.core.mail import EmailMultiAlternatives
 
-    subject = '来自www.liujiangblog.com的注册确认邮件'
+    subject = '来自www.linshutu.com的注册确认邮件'
 
     text_content = '''感谢注册www.liujiangblog.com，这里是刘江的博客和教程站点，专注于Python、Django和机器学习技术的分享！\
                     如果你看到这条消息，说明你的邮箱服务器不提供HTML链接功能，请联系管理员！'''
 
     html_content = '''
                     <p>感谢注册<a href="http://{}/confirm/?code={}" target=blank>www.liujiangblog.com</a>，\
-                    这里是刘江的博客和教程站点，专注于Python、Django和机器学习技术的分享！</p>
+                    这里是林殊途的博客和教程站点，专注于Python、Django和机器学习技术的分享！</p>
                     <p>请点击站点链接完成注册确认！</p>
                     <p>此链接有效期为{}天！</p>
                     '''.format('127.0.0.1:8000', code, settings.CONFIRM_DAYS)
@@ -1841,7 +1839,7 @@ if not user.has_confirmed:
 进入虚拟环境，切换到项目根目录下，使用pip工具的freeze参数。
 
 ```py
-(venv) D:\work\2019\for_test\mysite>pip freeze > ./requirements.t
+(venv) D:\work\2018\for_test\mysite>pip freeze > ./requirements.t
 
 ```
 
@@ -1900,7 +1898,6 @@ SECRET_KEY = 'b(&6i_$g2%8vh)ruu$)a9pkw+s-e&qj_e_#=@gnbo^48#gp_8a'
 ```python
 ## 这是一个用户登录和注册教学项目
 ## 这是一个可重用的登录和注册APP
-## 该项目教程发布在www.liujiangblog.com
 
 ## 简单的使用方法：
 
@@ -1937,8 +1934,6 @@ urlpatterns = [
 ```
    mysite - User login and register system
 
-   Copyright 2019- www.liujiangblog.com
-
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
    You may obtain a copy of the License at
@@ -1951,18 +1946,5 @@ urlpatterns = [
    See the License for the specific language governing permissions and
    limitations under the License.
 ```
-
-##### 五、上传代码
-
-这里我们将项目上传到github中，并取名为login-register。
-
-在上传过程中，确认文件列表的时候，一定要注意查看没有保密文件被上传。
-
-具体流程：https://blog.csdn.net/Jasonmes/article/details/80798227
-
-### 重用app
-
-http://www.liujiangblog.com/course/django/277
-
 
 
